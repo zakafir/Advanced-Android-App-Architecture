@@ -30,4 +30,6 @@
 
 package com.raywenderlich.ana.movietheatreexample
 
-class Screen
+import javax.inject.Inject
+
+class Screen @Inject constructor()

@@ -32,6 +32,7 @@ package com.raywenderlich.ana.movietheatreexample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.raywenderlich.ana.movietheatreexample.di.DaggerMovieTheatreComponent
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    val movieTheatre = MovieTheatre()
+    val movieTheatre = DaggerMovieTheatreComponent.create().getMovieTheatre()
     movieTheatre.playMovie()
   }
 }

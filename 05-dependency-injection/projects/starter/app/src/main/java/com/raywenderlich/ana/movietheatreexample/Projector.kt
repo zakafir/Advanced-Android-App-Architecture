@@ -30,4 +30,6 @@
 
 package com.raywenderlich.ana.movietheatreexample
 
-class Projector
+import javax.inject.Inject
+
+class Projector @Inject constructor()

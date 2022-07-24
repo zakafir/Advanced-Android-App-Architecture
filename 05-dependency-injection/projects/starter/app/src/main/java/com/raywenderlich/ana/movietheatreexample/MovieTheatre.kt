@@ -30,19 +30,13 @@
 
 package com.raywenderlich.ana.movietheatreexample
 
-class MovieTheatre {
+import javax.inject.Inject
 
-  var screen: Screen
-  var projector: Projector
-  var movie: Movie
-
-  init {
-    screen = Screen()
-    projector = Projector()
-    movie = Movie()
-  }
+class MovieTheatre @Inject constructor(val screen: Screen,
+                                       val projector: Projector,
+                                       val movie: Movie) {
 
   fun playMovie() {
-    System.out.println("Playing movie now")
+    println("Playing movie now")
   }
 }
